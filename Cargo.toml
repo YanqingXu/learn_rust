@@ -1,0 +1,153 @@
+[package]
+name = "learn_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A Rust learning project"
+
+# 主要的二进制文件
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+# 基础语法练习
+[[bin]]
+name = "variables"
+path = "src/basics/variables.rs"
+
+[[bin]]
+name = "functions"
+path = "src/basics/functions.rs"
+
+[[bin]]
+name = "control_flow"
+path = "src/basics/control_flow.rs"
+
+[[bin]]
+name = "data_types"
+path = "src/basics/data_types.rs"
+
+# 所有权系统练习
+[[bin]]
+name = "ownership"
+path = "src/ownership/ownership.rs"
+
+[[bin]]
+name = "references"
+path = "src/ownership/references.rs"
+
+[[bin]]
+name = "slices"
+path = "src/ownership/slices.rs"
+
+# 结构体和枚举
+[[bin]]
+name = "structs"
+path = "src/structs_enums/structs.rs"
+
+[[bin]]
+name = "enums"
+path = "src/structs_enums/enums.rs"
+
+[[bin]]
+name = "pattern_matching"
+path = "src/structs_enums/pattern_matching.rs"
+
+# 错误处理
+[[bin]]
+name = "error_handling"
+path = "src/error_handling/error_handling.rs"
+
+[[bin]]
+name = "result_option"
+path = "src/error_handling/result_option.rs"
+
+# 泛型和特征
+[[bin]]
+name = "generics"
+path = "src/generics_traits/generics.rs"
+
+[[bin]]
+name = "traits"
+path = "src/generics_traits/traits.rs"
+
+[[bin]]
+name = "lifetimes"
+path = "src/generics_traits/lifetimes.rs"
+
+# 集合类型
+[[bin]]
+name = "collections"
+path = "src/collections/collections.rs"
+
+[[bin]]
+name = "vectors"
+path = "src/collections/vectors.rs"
+
+[[bin]]
+name = "strings"
+path = "src/collections/strings.rs"
+
+[[bin]]
+name = "hashmaps"
+path = "src/collections/hashmaps.rs"
+
+# 函数式编程
+[[bin]]
+name = "functional"
+path = "src/functional/functional.rs"
+
+[[bin]]
+name = "closures"
+path = "src/functional/closures.rs"
+
+[[bin]]
+name = "iterators"
+path = "src/functional/iterators.rs"
+
+# 并发编程
+[[bin]]
+name = "concurrency"
+path = "src/concurrency/concurrency.rs"
+
+[[bin]]
+name = "threads"
+path = "src/concurrency/threads.rs"
+
+[[bin]]
+name = "channels"
+path = "src/concurrency/channels.rs"
+
+[[bin]]
+name = "shared_state"
+path = "src/concurrency/shared_state.rs"
+
+# 项目练习
+[[bin]]
+name = "calculator"
+path = "src/projects/calculator.rs"
+
+[[bin]]
+name = "todo_app"
+path = "src/projects/todo_app.rs"
+
+[[bin]]
+name = "file_search"
+path = "src/projects/file_search.rs"
+
+[dependencies]
+# 常用的学习依赖
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand = "0.8"
+clap = { version = "4.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+reqwest = { version = "0.11", features = ["json"] }
+
+[dev-dependencies]
+# 测试相关依赖
+criterion = "0.5"
+
+[[bench]]
+name = "benchmarks"
+harness = false

@@ -1,0 +1,88 @@
+{
+    // Rust 语言服务器配置
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.checkOnSave.allTargets": true,
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.procMacro.enable": true,
+    "rust-analyzer.imports.granularity.group": "module",
+    "rust-analyzer.imports.prefix": "crate",
+    
+    // 代码格式化
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    
+    // 编辑器设置
+    "editor.rulers": [100],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "editor.minimap.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    
+    // 文件关联
+    "files.associations": {
+        "*.rs": "rust",
+        "Cargo.toml": "toml",
+        "Cargo.lock": "toml"
+    },
+    
+    // 终端设置
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    
+    // 调试设置
+    "debug.console.fontSize": 14,
+    "debug.console.fontFamily": "Consolas, 'Courier New', monospace",
+    
+    // 工作区特定设置
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml"
+    ],
+    
+    // 代码提示和补全
+    "editor.suggest.insertMode": "replace",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    
+    // 错误和警告显示
+    "problems.decorations.enabled": true,
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.diagnostics.enableExperimental": true,
+    
+    // 代码镜头（Code Lens）
+    "rust-analyzer.lens.enable": true,
+    "rust-analyzer.lens.run.enable": true,
+    "rust-analyzer.lens.debug.enable": true,
+    "rust-analyzer.lens.implementations.enable": true,
+    "rust-analyzer.lens.references.enable": true,
+    
+    // 悬停提示
+    "rust-analyzer.hover.actions.enable": true,
+    "rust-analyzer.hover.actions.implementations.enable": true,
+    "rust-analyzer.hover.actions.references.enable": true,
+    "rust-analyzer.hover.actions.run.enable": true,
+    "rust-analyzer.hover.actions.debug.enable": true,
+    
+    // 自动导入
+    "rust-analyzer.completion.autoimport.enable": true,
+    "rust-analyzer.completion.autoself.enable": true,
+    
+    // 文件监视
+    "files.watcherExclude": {
+        "**/target/**": true,
+        "**/.git/**": true
+    },
+    
+    // 搜索排除
+    "search.exclude": {
+        "**/target": true,
+        "**/Cargo.lock": true
+    },
+    
+    // Git 设置
+    "git.ignoreLimitWarning": true
+}

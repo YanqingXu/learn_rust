@@ -1,0 +1,149 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "🦀 Debug Main Program",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=main",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "main",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "environment": [
+                {
+                    "name": "RUST_LOG",
+                    "value": "debug"
+                },
+                {
+                    "name": "RUST_BACKTRACE",
+                    "value": "1"
+                }
+            ],
+            "preLaunchTask": "rust: cargo build main",
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "🧮 Debug Calculator",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=calculator",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "calculator",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "environment": [
+                {
+                    "name": "RUST_BACKTRACE",
+                    "value": "1"
+                }
+            ],
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "📦 Debug Variables",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=variables",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "variables",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "🔧 Debug Functions",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=functions",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "functions",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "🏠 Debug Ownership",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ownership",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "ownership",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "sourceLanguages": ["rust"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "🧪 Debug Tests",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=learn_rust"
+                ],
+                "filter": {
+                    "name": "learn_rust",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "environment": [
+                {
+                    "name": "RUST_BACKTRACE",
+                    "value": "1"
+                }
+            ],
+            "sourceLanguages": ["rust"]
+        }
+    ]
+}
