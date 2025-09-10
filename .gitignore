@@ -1,0 +1,117 @@
+# Rust 项目 Git 忽略文件
+
+# 编译输出
+/target/
+debug/
+release/
+
+# 依赖锁定文件（可选择性提交）
+# Cargo.lock
+
+# 这些文件由 Cargo 自动生成
+# 但通常应该在版本控制中
+**/*.rs.bk
+
+# 编译器生成的文件
+*.exe
+*.pdb
+*.d
+
+# IDE / 编辑器文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# VS Code 设置（可选择性忽略）
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Rust Analyzer 缓存
+.rust-analyzer/
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows 系统文件
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# 基准测试结果
+/benches/target/
+
+# 文档生成目录
+/doc/
+
+# 性能分析文件
+perf.data
+perf.data.old
+
+# 内存检查工具文件
+*.memprof
+
+# 测试覆盖率文件
+/coverage/
+tarpaulin-report.html
+lcov.info
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 备份文件
+*.bak
+*.backup
+
+# 补丁文件
+*.patch
+*.diff
+
+# 本地配置文件
+.local/
+local/
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 缓存目录
+cache/
+.cache/
+
+# 构建脚本生成的文件
+build.rs.generated
+
+# Clippy 缓存
+.clippy_cache/
+
+# Rustfmt 备份
+*.rs.fmt
+
+# 开发过程中的临时文件
+TODO.md
+NOTES.md
+scratch/
+temp/
+
+# 学习笔记和草稿（根据需要调整）
+# notes/
+# drafts/
+
+# 本地实验文件
+experiments/
+playground/
